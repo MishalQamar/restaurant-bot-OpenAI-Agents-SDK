@@ -14,6 +14,11 @@ class InputGuardRailOutput(BaseModel):
     reason: str
 
 
+class OutputGuardRailOutput(BaseModel):
+    is_off_topic: bool
+    reason: str
+
+
 class TechnicalOutputGuardRailOutput(BaseModel):
     contains_off_topic: bool
     contains_billing_data: bool

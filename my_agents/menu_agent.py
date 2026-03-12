@@ -1,5 +1,6 @@
 from agents import Agent, RunContextWrapper
 from models import UserAccountContext
+from output_guardrails import off_topic_output_guardrail
 
 
 def menu_agent_instructions(
@@ -34,6 +35,7 @@ def menu_agent_instructions(
 menu_agent = Agent(
     name="Menu Agent",
     instructions=menu_agent_instructions,
+    output_guardrails=[off_topic_output_guardrail],
 )
 
 from agents import Agent, RunContextWrapper
@@ -70,4 +72,3 @@ menu_agent = Agent(
     name="Menu Agent",
     instructions=menu_agent_instructions,
 )
-

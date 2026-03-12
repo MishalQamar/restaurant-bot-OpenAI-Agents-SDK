@@ -1,5 +1,6 @@
 from agents import Agent, RunContextWrapper
 from models import UserAccountContext
+from output_guardrails import off_topic_output_guardrail
 
 
 def reservation_agent_instructions(
@@ -75,5 +76,5 @@ def reservation_agent_instructions(
 reservation_agent = Agent(
     name="Reservation Agent",
     instructions=reservation_agent_instructions,
+    output_guardrails=[off_topic_output_guardrail],
 )
-
