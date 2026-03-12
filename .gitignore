@@ -14,3 +14,6 @@ wheels/
 
 # Local database/state
 agent-memory.db
+
+# Streamlit secrets
+.streamlit/secrets.toml
